@@ -2,6 +2,8 @@
  * El la opsición al skipWhile, este lo que realiza es coger los valores iniciales y despues 
  * empieza a omitir los valores, el takeWhile funciona por mostrar valores que cumplen
  * con una condición y apartir de esto si la condicion deja de cumplirse no muestra mas valores
+ * 
+ * la condicion solo aplica desde el primer valor en adelante
  */
 
 void main() {

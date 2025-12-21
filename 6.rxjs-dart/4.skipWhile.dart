@@ -2,6 +2,8 @@
  * Skipea los valores o no los pasa al listener, solo si se cumple la condicion que le demos
  * Y despues de que se deje de cumplir sigue imprimiendo normal sin volver a evaluar, por ende
  * es unicamente para los primeros valores
+ * 
+ * la condicion solo aplica desde el primer valor en adelante
  */
 
 void main() {
