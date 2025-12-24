@@ -13,7 +13,12 @@ void main() {
    * Una mejor forma de hacer el paso anterior, ya que reutilizamos la misma instancia,
    * Consiste en usar una especie de spread de 2 puntos despues de la clase y ya podemos invocar otras propiedades
    */
-  final persona2 = new Personas(name: "Pablo", lastname: "Arteaga", age: 18);
+  final persona2 = new Personas(
+    name: "Pablo",
+    lastname: "Arteaga",
+    age: 18,
+    isActive: true,
+  );
 
   // Aca se imprime el toString de Personas pero remplzamos la data en la impresion
   print(
@@ -26,4 +31,6 @@ void main() {
   persona2.setAttribute(lastname: "Orrego");
 
   print(persona2);
+
+  print(persona2.isUserActive);
 }
