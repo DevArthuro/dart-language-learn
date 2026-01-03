@@ -49,5 +49,32 @@ void main() {
   /**
    * Generate basicamente me genera una lista con una longitud fija y le podemos pasar un callback para generar
    * datos por defecto, ese callback recibe como argumento el index donde va hasta que se cumpla la logitud
+   * 
+   * el growbable por defecto es true o sea que podemos poner objetos 
    */
+  List<String> listGenerate = List.generate(7, (int index) {
+    return "Carlos $index";
+  }, growable: true);
+
+  print(listGenerate);
+
+  /**
+   * of es bueno diferenciarlo con from y podemos ver esto con el uso de var 
+   * 
+   * from no infiere el tipo 
+   * 
+   * of si infiere el tipo ya que of se apoya sobre genericos
+   */
+
+  final listWithFrom = List.from([1, 2, 3, 4]);
+  // List<dynamic>
+  print(listWithFrom.runtimeType);
+  // Esto esta bien ya que la inferencia es dynamic
+  listWithFrom.add("Carlos");
+
+  // List<int>
+  final listWithOf = List.of([1, 2, 3, 4]);
+  print(listWithOf.runtimeType);
+  // Esto da error ya que la lista infiere que es string
+  listWithOf.add("Carlos");
 }
